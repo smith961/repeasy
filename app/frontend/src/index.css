@@ -1,0 +1,32 @@
+@import "tailwindcss";
+:root {
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  
+ 
+} 
+
+
+
+
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: white;
+    
+    
+  }
+  
+  a:hover {
+    color: #747bff;
+  }
+  
+}

@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import { Search, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
-
 import './Dashboard.css'
 import { useNavigate } from 'react-router-dom';
 
@@ -45,7 +44,7 @@ const Dashboard: React.FC = () => {
     { id: "lineup", name: 'LineUp Games', icon: '🪁', color: 'bg-stone-300' },
     { id: "ensofi", name: 'EnsoFi', icon: '', color: 'bg-pink-300' },
     { id: "studiomirai", name: 'Studio Mirai', icon: '🪁', color: 'bg-green-300' },
-    { id: "studiomirai", name: 'Studio Mirai', icon: '🪁', color: 'bg-green-300' },
+    { id: "studiomiai", name: 'Studio Mirai', icon: '🪁', color: 'bg-green-300' },
   ];
 
   const postTGEProjects: Project[] = [
@@ -69,7 +68,7 @@ const Dashboard: React.FC = () => {
     <button
       onClick={onClick}
       className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 min-w-[195px] flex-shrink-0 ${isSelected
-          ? 'bg-teal-700 text-black shadow-lg scale-105 ring-2 ring-teal-500'
+          ? 'bg-teal-700 text-white shadow-lg scale-105 ring-2 ring-teal-500'
           : 'bg-white text-gray-800 hover:bg-gray-50 hover:shadow-md'
         }`}
     >
@@ -127,7 +126,7 @@ const Dashboard: React.FC = () => {
     const scrollRef = section === 'preTGE' ? preTGEScrollRef : postTGEScrollRef;
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
-        left: -300, // Scroll by approximately 2 card widths
+        left: -200, // Scroll by approximately 2 card widths
         behavior: 'smooth'
       });
     }
@@ -137,14 +136,14 @@ const Dashboard: React.FC = () => {
     const scrollRef = section === 'preTGE' ? preTGEScrollRef : postTGEScrollRef;
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
-        left: 300, // Scroll by approximately 2 card widths
+        left: 200, // Scroll by approximately 2 card widths
         behavior: 'smooth'
       });
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8">
+    <div className="min-w-screen min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8 border">
       {/* Header */}
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-center mb-12">
@@ -186,7 +185,7 @@ const Dashboard: React.FC = () => {
           <h2 className="text-4xl font-bold text-gray-900">GiveRep</h2>
         </div>
 
-        <div className="rounded-3xl shadow-xl p-8 mb-8">
+        <div className="card rounded-3xl shadow-xl p-8 mb-8">
           {/* Pre-TGE Projects */}
           <div className="relative mb-12">
             <h3 className="text-2xl font-bold text-teal-800 mb-6">Pre-TGE Projects</h3>
@@ -205,7 +204,7 @@ const Dashboard: React.FC = () => {
                 className="overflow-x-auto scrollbar-hide scroll-smooth px-2"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
-                <div className="flex gap-5 pb-4">
+                <div className="flex gap-5 pb-26 mb-8">
                   {filteredProjects.map((project) => (
                     <ProjectCard
                       key={project.id}
@@ -237,7 +236,7 @@ const Dashboard: React.FC = () => {
                 className="overflow-x-auto scrollbar-hide scroll-smooth px-2"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
-                <div className="flex gap-5 pb-4">
+                <div className="flex gap-5 pb-26 mb-8">
                   {filteredPostTGEProjects.map((project) => (
                     <ProjectCard
                       key={project.id}
@@ -257,7 +256,7 @@ const Dashboard: React.FC = () => {
           <div className="  fixed bottom-8 right-8 z-50">
             <button
               onClick={handleNextClick}
-              className="bg-teal-700 text-black px-8 py-4 rounded-full font-bold text-lg flex items-center gap-3 hover:bg-teal-600 transition-all shadow-2xl hover:scale-105"
+              className="bg-teal-700 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center gap-3 hover:bg-teal-600 transition-all shadow-2xl hover:scale-105"
             >
               Next
               <ArrowRight size={24} />

@@ -89,7 +89,7 @@ const RepEasy: React.FC<RepEasyProps> = ({ selectedProjectId }) => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8">
+    <div className="min-w-screen min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-center mb-8">
@@ -105,7 +105,7 @@ const RepEasy: React.FC<RepEasyProps> = ({ selectedProjectId }) => {
         <div className="mb-8">
           <button
             onClick={handleBackToSelection}
-            className="flex items-center gap-2 px-6 py-3 bg-teal-700 rounded-lg hover:bg-teal-800 transition-colors shadow-md"
+            className="flex items-center gap-2 px-6 py-3 bg-teal-700 text-white rounded-lg hover:bg-teal-800 transition-colors shadow-md"
           >
             <ArrowLeft size={20} />
             Back to Selection
@@ -205,7 +205,7 @@ const RepEasy: React.FC<RepEasyProps> = ({ selectedProjectId }) => {
         <div className="flex justify-center">
           <button
             onClick={handleGenerateTweets}
-            className="px-12 py-4 bg-teal-700 hover:bg-teal-800  rounded-full text-xl font-bold transition-all shadow-xl hover:scale-105"
+            className="px-12 py-4 bg-teal-700 text-white hover:bg-teal-800  rounded-full text-xl font-bold transition-all shadow-xl hover:scale-105"
           >
             Generate Tweets
           </button>
