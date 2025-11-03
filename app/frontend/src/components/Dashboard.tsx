@@ -143,15 +143,15 @@ const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="min-w-screen min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8 border">
+    <div className="min-w-screen min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8">
       {/* Header */}
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto ">
         <div className="flex items-center justify-center mb-12">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-600 rounded-2xl flex items-center justify-center shadow-lg transform rotate-12">
               <span className="text-2xl transform -rotate-12">💧</span>
             </div>
-            <h1 className="text-5xl font-bold text-gray-900">RepEasy</h1>
+            <h1 className="text-5xl font-bold text-gray-900 ">RepEasy</h1>
           </div>
         </div>
 
@@ -265,6 +265,7 @@ const Dashboard: React.FC = () => {
         )}
       </div>
     </div>
+   
   );
 }
 
